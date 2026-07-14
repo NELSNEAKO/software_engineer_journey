@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Object Challenge</title>
+  </head>
+
+  <body>
+    <h1>Object Challenge</h1>
+    <div id="carInfo"></div>
+    <script>
+      // Define your car object here
+      const car = {
+        make: 'Tesla',
+        model: 'Model S',
+        year: 2020,
+        displayInfo: function () {
+          return `Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`;
+        },
+      };
+      // Populate car object here
+
+      console.log(car.displayInfo());
+
+      // Add you code here
+
+      // Define and export your function here
+
+      // Set car info to the div
+      document.getElementById('carInfo').textContent = car.displayInfo();
+
+      class Person {
+        // Constructor and methods here
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        greet() {
+          return `Hello, my name is ${this.name} and I am ${this.age} years old`;
+        }
+      }
+
+      const person = new Person('Neil', 23);
+
+      console.log(person.greet());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DOM Manipulation Challenge</title>
+  </head>
+  <body>
+    <h1>DOM Manipulation Challenge</h1>
+    <p id="paragraph">Original Text</p>
+    <button id="changeTextButton">Change Text</button>
+    <script>
+      // Add your JavaScript code here
+
+      document
+        .getElementById('changeTextButton')
+        .addEventListener('click', () => {
+          document.getElementById('paragraph').innerHTML =
+            'DOM Manipulation Successful!';
+        });
+    </script>
+  </body>
+</html>

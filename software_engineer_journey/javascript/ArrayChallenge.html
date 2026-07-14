@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Array Challenge</title>
+  </head>
+  <body>
+    <h1>Array Challenge</h1>
+    <button id="findIndexButton">Find Index</button>
+    <p id="result">result</p>
+    <script>
+      const numbers = [3, 9, 7, 4, 7, 1, 7];
+      // Add your JavaScript code here
+
+      const btn = document.getElementById('findIndexButton');
+
+      const indexValue = numbers.indexOf(7);
+
+      btn.addEventListener('click', () => {
+        document.getElementById('result').innerHTML = indexValue;
+      });
+
+      console.log(indexValue);
+    </script>
+  </body>
+</html>

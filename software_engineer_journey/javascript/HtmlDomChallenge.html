@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Browser BOM Challenge</title>
+  </head>
+  <body>
+    <h1 id="header">Original Text</h1>
+    <button id="changeTextButton">Change Text</button>
+    <script>
+      window.document
+        .getElementById('changeTextButton')
+        .addEventListener('click', () => {
+          document.getElementById('header').innerHTML = 'Browser BOM Challenge';
+        });
+
+      // Add your JavaScript code here
+    </script>
+  </body>
+</html>

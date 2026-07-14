@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const letters = new Set();
+
+      // Add values to set
+      letters.add('a');
+      letters.add('b');
+      letters.add('c');
+      letters.add('a');
+
+      const array = ['a', 'b', 'c'];
+      console.log('sets: ', letters.values());
+      console.log('array', array);
+
+      // Create an empty Map
+      const fruits = new Map();
+
+      // Set Map Values
+      fruits.set('apples', 500);
+      fruits.set('bananas', 300);
+      fruits.set('oranges', 200);
+
+      console.log('map: ', fruits.values());
+
+      function checkTypeOf(myVar) {
+        // Write your code here
+
+        return myVar.toString();
+      }
+
+      console.log(checkTypeOf(23));
+      console.log(23);
+    </script>
+  </body>
+</html>

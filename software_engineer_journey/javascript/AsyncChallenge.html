@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Async Challenge</title>
+  </head>
+
+  <body>
+    <h1>Async Challenge</h1>
+    <button id="fetchMessageButton">Fetch Message</button>
+    <p id="message"></p>
+    <script>
+      const fetchMessage = async () => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const message = 'Hello, Asynchronous World!';
+            console.log('message: ', message);
+            resolve(message);
+          }, 1000);
+        });
+      };
+
+      document
+        .getElementById('fetchMessageButton')
+        .addEventListener('click', async () => {
+          try {
+            const result = await fetchMessage();
+            console.log('data', result);
+
+            document.getElementById('message').innerHTML = result;
+          } catch (error) {
+            console.log('error');
+          }
+        });
+
+      // Add your JavaScript code here
+    </script>
+  </body>
+</html>

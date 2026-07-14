@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Loops & Iterables Challenge</title>
+  </head>
+
+  <body>
+    <h1>Loops & Iterables Challenge</h1>
+    <input type="text" id="inputString" placeholder="Enter a string" />
+    <button id="countButton">Count</button>
+    <p id="letteraCount">0</p>
+    <script>
+      document.getElementById('countButton').addEventListener('click', () => {
+        const inputString = document.getElementById('inputString').value;
+        // Add your JavaScript code here'
+
+        let counter = 0;
+
+        //split so we can count each letter
+        const letters = inputString.split('');
+
+        for (const x of letters) {
+          // code block to be executed
+
+          //only count the a
+          if (x === 'a') {
+            counter += 1;
+
+            console.log('count of: ', x, counter);
+          }
+        }
+
+        //Display the total count of each a letter
+        document.getElementById('letteraCount').innerHTML = counter;
+      });
+    </script>
+  </body>
+</html>

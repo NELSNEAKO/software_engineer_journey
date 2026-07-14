@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Logic Challenge</title>
+  </head>
+
+  <body>
+    <h1>Logic Challenge</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <button id="checkButton">Check Number</button>
+    <p id="message"></p>
+    <script>
+      document
+        .getElementById('checkButton')
+        .addEventListener('click', function () {
+          const number = document.getElementById('numberInput').value;
+          // Add your JavaScript code here
+          let result = '';
+
+          if (number < 5) {
+            result = 'The number is less than 5.';
+          } else if (number >= 5) {
+            result = 'The number is 5 or greater.';
+          } else {
+            result = 'Invalid Number';
+          }
+
+          document.getElementById('message').innerHTML = result;
+        });
+    </script>
+  </body>
+</html>

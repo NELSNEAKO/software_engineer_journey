@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TypeOf & Type Conversion</title>
+  </head>
+  <body>
+    <h1>TypeOf & Type Conversion</h1>
+
+    <input type="text" id="numberInput" placeholder="Enter A number" />
+
+    <button id="convertBtn">Convert to string</button>
+
+    <p id="output"></p>
+
+    <script>
+      function checkTypeOf(myVar) {
+        // Write your code here
+
+        return typeof myVar;
+      }
+
+      const btn = document.getElementById('convertBtn');
+      btn.addEventListener('click', () => {
+        const number = document.getElementById('numberInput').value;
+        const converted = checkTypeOf(number);
+
+        document.getElementById('output').innerHTML = converted;
+      });
+
+      // Create an Array
+      const fruits = ['Bananas', 'Oranges', 'Apples', 'Mangos'];
+
+      // Destructuring
+      // let [fruit2, ...rest] = fruits;
+
+      // console.log(...rest);
+
+      // function removeFirstElement(myArray) {
+      //   // Add your code here
+
+      //   // If i return the ...rest now the first element is not included
+      //   let [fruit1, ...otherfruits] = myArray;
+
+      //   return otherfruits;
+      // }
+
+      // removeFirstElement(fruits);
+
+      const counter = {
+        count: 0,
+        increment() {
+          // Implement the increment method
+          return (this.count += 1);
+        },
+        decrement() {
+          // Implement the decrement method
+          return (this.count -= 1);
+        },
+        getCount() {
+          return this.count;
+        },
+      };
+
+      const value = counter.increment();
+
+      console.log('count: ', value);
+    </script>
+  </body>
+</html>

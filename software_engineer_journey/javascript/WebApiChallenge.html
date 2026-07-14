@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Web APIs Challenge</title>
+  </head>
+  <body>
+    <h1>Geolocation API Challenge</h1>
+    <button id="getLocationButton">Get Location</button>
+    <p id="locationDisplay"></p>
+    <script>
+      // Add your JavaScript code here
+      const locationDisplay = document.getElementById('locationDisplay');
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          locationDisplay.innerHTML =
+            'Geolocation is not supported by this browser.';
+        }
+      }
+
+      function showPosition(position) {
+        locationDisplay.innerHTML =
+          'Latitude: ' +
+          position.coords.latitude +
+          ', Longitude: ' +
+          position.coords.longitude;
+      }
+
+      document
+        .getElementById('getLocationButton')
+        .addEventListener('click', () => {
+          getLocation();
+        });
+    </script>
+  </body>
+</html>

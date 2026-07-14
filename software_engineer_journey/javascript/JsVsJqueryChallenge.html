@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JS vs jQuery Challenge</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>JS vs jQuery Challenge</h1>
+    <button id="colorButton">Change Color</button>
+    <div
+      id="colorDiv"
+      style="width: 100px; height: 100px; border: 1px solid black"
+    ></div>
+    <script>
+      // Add your jQuery code here
+
+      document.getElementById('colorButton').addEventListener('click', () => {
+        // set thebackground color to light blue using jquery
+        const element = $('#colorDiv').css('background-color', 'lightblue');
+        console.log(element);
+      });
+
+      //   myElement.text('new Color');
+
+      myElement = $('#colorDiv');
+
+      console.log(myElement);
+    </script>
+  </body>
+</html>

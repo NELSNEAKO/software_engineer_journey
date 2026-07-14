@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Miscellaneous Challenge</title>
+  </head>
+
+  <body>
+    <h1>Miscellaneous Challenge</h1>
+    <button id="generateButton">Generate Number</button>
+    <div id="output"></div>
+    <script>
+      document
+        .getElementById('generateButton')
+        .addEventListener('click', function () {
+          // Add your code here
+
+          const number = Math.floor(Math.random() * 100);
+
+          document.getElementById('output').innerHTML = number;
+        });
+
+      function safeDivision(x, y) {
+        // Write your code here
+        if (y === 0) {
+          throw 'Division by zero is not allowed';
+        }
+
+        return x / y;
+      }
+      // console.log(safeDivision(10, 5));
+
+      const cars = ['Saab', 'Volvo', 'BMW'];
+
+      function getLastElement(array) {
+        // Add your code here
+
+        // this return the last element
+        return array.at(-1);
+      }
+
+      console.log(cars.at(-1));
+    </script>
+  </body>
+</html>

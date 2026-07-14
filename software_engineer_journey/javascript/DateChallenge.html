@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Date Challenge</title>
+  </head>
+
+  <body>
+    <h1>Date Challenge</h1>
+    <button id="dateButton">Show milliseconds</button>
+    <div id="millisecondsDisplay"></div>
+    <script>
+      // Add your JavaScript code here
+
+      // const d = 'March 21 2023';
+
+      const btn = document.getElementById('dateButton');
+      btn.addEventListener('click', () => {
+        const result = Date.parse(d);
+        document.getElementById('millisecondsDisplay').innerHTML = result;
+      });
+
+      const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ];
+
+      const d = new Date('2021-03-25');
+      let month = months[d.getMonth()];
+
+      console.log(month);
+    </script>
+  </body>
+</html>
